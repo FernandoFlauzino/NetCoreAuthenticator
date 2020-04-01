@@ -19,7 +19,7 @@ namespace NetCoreAuthenticator.Service
         {
             var secretKey = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 10);
 
-            var result = _twoFactorSetupRepository.Generate("Guide", "guide@guide.com.br", secretKey, 300, 300);
+            var result = _twoFactorSetupRepository.Generate("TwoFactor", "exaple@email.com.br", secretKey, 300, 300);
 
             var twoFactor = CreateViewModel(result);
 
